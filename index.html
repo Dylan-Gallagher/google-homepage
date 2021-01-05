@@ -8,6 +8,12 @@
         body {
             font-family: arial,sans-serif;
         }
+        .grid-container {
+            display: grid;
+        }
+        .logo-searchbar {
+            margin-top: 120px;
+        }
         ul {
             list-style-type: none;
             margin: 0;
@@ -20,22 +26,25 @@
         }
         a {
             display: block;
-            padding: 8px;
+            padding: 7px;
             background-color: white;
             color: rgba(0,0,0,0.87);
             text-decoration: none;
+            font-size: 13px;
         }
         a:hover {
             text-decoration: underline;
+            opacity: .85
         }
 
         .logo {
             display: block;
             padding-top: 10px !important;
-            height: 72px;
+            height: 92px;
             width: auto;
             margin-right: auto;
             margin-left: auto;
+            margin-bottom: 28px;
         }
 
         .searchbar {
@@ -48,6 +57,7 @@
             border: 1px #80808057 solid;
             border-radius: 22px;
             margin-top: 15px;
+            padding-left: 15px;
         }
 
         input:hover {
@@ -56,24 +66,26 @@
 
 
     </style>
-    <div>
-        <ul>
-            <li><a href="#">Images</a></li>
-            <li><a href="#">Gmail</a></li>
-        </ul>
-    </div>
-    <div>
-        <div>
-
-            <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" id="logo" class="logo">
-        
+    <div class="grid-container">
+        <div class="grid-item">
+            <ul>
+                <li><a href="#">Images</a></li>
+                <li><a href="#">Gmail</a></li>
+            </ul>
         </div>
-        <div>
-            <form>
-                <label for="searchbar">
-                    <input name="searchbar" id="searchbar" class="searchbar">
-                </label>
-            </form>
+        <div class="grid-item logo-searchbar">
+            <div>
+
+                <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" id="logo" class="logo">
+        
+            </div>
+            <div>
+                <form>
+                    <label for="searchbar">
+                        <input name="searchbar" id="searchbar" class="searchbar">
+                    </label>
+                </form>
+            </div>
         </div>
     </div>
 </body>
